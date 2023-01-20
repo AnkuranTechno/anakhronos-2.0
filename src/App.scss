@@ -1,0 +1,7 @@
+@import 'config';
+
+.app {
+  &__section {
+    @include sectionWidth;
+  }
+}
