@@ -1,0 +1,44 @@
+.sponsors
+{
+    height: 500px;
+    background-color: #F0F2F6;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+   
+}
+.sponsor__images
+{   overflow: hidden;
+    img
+    {
+        // position: absolute;
+        padding-top: 5rem;
+        max-height: 20%;
+        max-width: 20%;
+        object-fit: contain;
+    }
+}
+.sponsors-container 
+{
+    
+    
+    h1
+    {
+        text-transform: uppercase;
+        top: 3.125rem;
+        position: relative;
+        padding: 10px 0;
+        font-size: 36px;
+        &::before
+        {
+            width: 30px;
+            content: " ";
+            position: absolute;
+            border-top: solid 3px #f50136;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+
