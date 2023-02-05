@@ -1,39 +1,90 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaBars } from 'react-icons/fa';
+import { HiX } from 'react-icons/hi';
+
+import useIsMobile from '../../hooks/useMobile';
+import { tmslLogo } from '../../constants/images';
 
 import './Navbar.scss';
-import { tmslLogo } from '../../constants/image';
 
 const Navbar = () => {
+  const navLinks = [
+    { name: 'Home', link: '#hero' },
+    { name: 'About', link: '#about' },
+    { name: 'Events', link: '#events' },
+    { name: 'Gallery', link: '#gallery' },
+    { name: 'Sponsors', link: '#sponsors' },
+    { name: 'Contact', link: '#contact' },
+  ];
+
+  const isMobile = useIsMobile();
+  const [toggle, setToggle] = useState(false);
+
   return (
-    <header className="app__section navbar">
-      <div className="app__section-container navbar-container">
-        <div className="navbar__logo-container">
-          <div className="navbar__logo">
+    <div className="navbar">
+      <div className="app__section-container navbar__container">
+        <div className="navbar__logo">
+          <a href="#hero">
             <img src={tmslLogo} alt="logo" />
-          </div>
+          </a>
         </div>
-        <ul className="navbar__menu">
-          <li className="navbar__menu-item">
-            <a href="#hero">Home</a>
-          </li>
-          <li className="navbar__menu-item">
-            <a href="#about">About</a>
-          </li>
-          <li className="navbar__menu-item">
-            <a href="#events">Event</a>
-          </li>
-          <li className="navbar__menu-item">
-            <a href="#gallery">Gallery</a>
-          </li>
-          <li className="navbar__menu-item">
-            <a href="#sponsors">Sponsors</a>
-          </li>
-          <li className="navbar__menu-item">
-            <a href="#footer">Contact</a>
-          </li>
-        </ul>
+
+        {isMobile ? (
+          <div className="navbar__actions navbar__actions--mobile-only">
+            <motion.button
+              className="navbar__toggle-btn"
+              onClick={() => setToggle(!toggle)}
+            >
+              {!toggle && (
+                <div className="navbar__toggle-btn hamburger">
+                  <FaBars />
+                </div>
+              )}
+              {toggle && (
+                <div className="navbar__toggle-btn cross">
+                  <HiX />
+                </div>
+              )}
+            </motion.button>
+
+            {toggle && (
+              <motion.div
+                className="navbar__links-container"
+                animate={{ translateY: ['-100%', '0%'] }}
+                transition={{ duration: 0.1 }}
+              >
+                <ul className="navbar__links">
+                  {navLinks.map((link) => (
+                    <li className="navbar__link" key={link.name}>
+                      <a href={link.link} onClick={() => setToggle(!toggle)}>
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
+          </div>
+        ) : (
+          <>
+            <motion.div
+              className="navbar__actions navbar__actions--desktop-only"
+              animate={{ translateX: ['100%', '0%'] }}
+              transition={{ duration: 0.35 }}
+            >
+              <ul className="navbar__links">
+                {navLinks.map((link) => (
+                  <li className="navbar__link" key={link.name}>
+                    <a href={link.link}> {link.name} </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </>
+        )}
       </div>
-    </header>
+    </div>
   );
 };
 
