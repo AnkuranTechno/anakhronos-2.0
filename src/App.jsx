@@ -6,6 +6,7 @@ import {
   Navbar,
   Hero,
   About,
+  Management,
   Events,
   Gallery,
   Sponsors,
@@ -18,6 +19,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      {/* <Management/> */}
       <Events />
       <Gallery />
       <Sponsors />
@@ -25,5 +27,6 @@ const App = () => {
     </div>
   );
 };
-
+//exporting app
+//exporting app
 export default App;
