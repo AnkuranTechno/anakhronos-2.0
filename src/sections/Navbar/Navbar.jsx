@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Navbar.scss';
-import { tmslLogo } from '../../constants/images';
+import { tmslLogo } from '../../constants/image';
 
 const Navbar = () => {
   return (
