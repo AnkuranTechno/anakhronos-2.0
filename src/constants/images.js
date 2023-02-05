@@ -4,3 +4,7 @@ export { default as yoLogo } from '../assets/images/yo.png';
 export { default as heroImg } from '../assets/images/anakhronos.jpg';
 export { default as aboutImg } from '../assets/images/about-us.jpg';
 export { default as technoImg } from '../assets/images/techno.jpg';
+export { default as nestleLogo } from '../assets/images/nestle.png';
+export { default as chevroletLogo } from '../assets/images/chevrolet.png';
+export { default as olaCabLogo } from '../assets/images/ola-cabs.png';
+export { default as timesOfIndiaLogo } from '../assets/images/the-times-of-india-logo.png';

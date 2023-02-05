@@ -1,5 +1,11 @@
 import React from 'react';
 
+import {
+  nestleLogo,
+  olaCabLogo,
+  timesOfIndiaLogo,
+} from '../../constants/images';
+
 import './Sponsors.scss';
 
 const Sponsors = () => {
@@ -10,23 +16,23 @@ const Sponsors = () => {
         <div class="sponsors-slideshow">
           <div class="slide">
             {/* to add a new image/sponsor you need to add it in all three images chunks. No need to resize the image, it is taken care of in the css. */}
-            <img src='nestle.png' alt='chevrolet' />   
-            <img src='ola-cabs.png' alt='chevrolet' />
-            <img src='the-times-of-india-logo.png' alt='chevrolet' />
-            <img src='ola-cabs.png' alt='chevrolet' />
-            <img src='the-times-of-india-logo.png' alt='chevrolet' />
+            <img src={nestleLogo} alt="chevrolet" />
+            <img src={olaCabLogo} alt="chevrolet" />
+            <img src={timesOfIndiaLogo} alt="chevrolet" />
+            <img src={olaCabLogo} alt="chevrolet" />
+            <img src={timesOfIndiaLogo} alt="chevrolet" />
 
-            <img src='nestle.png' alt='chevrolet' />
-            <img src='ola-cabs.png' alt='chevrolet' />
-            <img src='the-times-of-india-logo.png' alt='chevrolet' />
-            <img src='ola-cabs.png' alt='chevrolet' />
-            <img src='the-times-of-india-logo.png' alt='chevrolet' />
+            <img src={nestleLogo} alt="chevrolet" />
+            <img src={olaCabLogo} alt="chevrolet" />
+            <img src={timesOfIndiaLogo} alt="chevrolet" />
+            <img src={olaCabLogo} alt="chevrolet" />
+            <img src={timesOfIndiaLogo} alt="chevrolet" />
 
-            <img src='nestle.png' alt='chevrolet' />
-            <img src='ola-cabs.png' alt='chevrolet' />
-            <img src='the-times-of-india-logo.png' alt='chevrolet' />
-            <img src='ola-cabs.png' alt='chevrolet' />
-            <img src='the-times-of-india-logo.png' alt='chevrolet' />
+            <img src={nestleLogo} alt="chevrolet" />
+            <img src={olaCabLogo} alt="chevrolet" />
+            <img src={timesOfIndiaLogo} alt="chevrolet" />
+            <img src={olaCabLogo} alt="chevrolet" />
+            <img src={timesOfIndiaLogo} alt="chevrolet" />
           </div>
         </div>
       </div>
