@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Navbar.scss';
-import { navbarLogo } from '../../constants/image';
+import { tmslLogo } from '../../constants/images';
 
 const Navbar = () => {
   return (
@@ -9,18 +9,27 @@ const Navbar = () => {
       <div className="app__section-container navbar-container">
         <div className="navbar__logo-container">
           <div className="navbar__logo">
-            <img src={navbarLogo} alt="logo" />
+            <img src={tmslLogo} alt="logo" />
           </div>
         </div>
         <ul className="navbar__menu">
           <li className="navbar__menu-item">
-            <a href="/">Home</a>
+            <a href="#hero">Home</a>
           </li>
           <li className="navbar__menu-item">
-            <a href="/">About</a>
+            <a href="#about">About</a>
           </li>
           <li className="navbar__menu-item">
-            <a href="/">Contact</a>
+            <a href="#events">Event</a>
+          </li>
+          <li className="navbar__menu-item">
+            <a href="#gallery">Gallery</a>
+          </li>
+          <li className="navbar__menu-item">
+            <a href="#sponsors">Sponsors</a>
+          </li>
+          <li className="navbar__menu-item">
+            <a href="#footer">Contact</a>
           </li>
         </ul>
       </div>
