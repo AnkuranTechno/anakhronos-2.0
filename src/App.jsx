@@ -10,7 +10,9 @@ import {
   Gallery,
   Sponsors,
   Footer,
+  
 } from './sections';
+import Team from './sections/Team/Team';
 
 const App = () => {
   return (
@@ -20,6 +22,7 @@ const App = () => {
       <About />
       <Events />
       <Gallery />
+      <Team/>
       <Sponsors />
       <Footer />
     </div>
