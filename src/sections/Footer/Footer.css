@@ -1,4 +1,6 @@
-
+.app__section footer{
+    width: 100% !important; 
+}
 .footer-container {
     max-width: 100%;
     display: flex;
