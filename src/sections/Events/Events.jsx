@@ -1,14 +1,17 @@
 import React from 'react';
+import EventCard from './EventCard';
 
 import './Events.scss';
 
 const Events = () => {
   return (
-    <div className="app__section events" id="events">
-      <div className="app__section-container events-container">
-        <h1>Events</h1>
-      </div>
-    </div>
+    <section className="section-event">
+      <EventCard image="https://preview.colorlib.com/theme/evento/assets/img/speakers/s3.png.webp" />
+      <EventCard image="https://preview.colorlib.com/theme/evento/assets/img/speakers/s3.png.webp" />
+      <EventCard image="https://preview.colorlib.com/theme/evento/assets/img/speakers/s3.png.webp" />
+      <EventCard image="https://preview.colorlib.com/theme/evento/assets/img/speakers/s3.png.webp" />
+      <EventCard image="https://preview.colorlib.com/theme/evento/assets/img/speakers/s3.png.webp" />
+    </section>
   );
 };
 
