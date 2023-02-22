@@ -1,0 +1,53 @@
+.block{
+    position: relative;
+    overflow: hidden;
+    padding:6px;
+    
+}
+.block .block-image{
+position: relative;
+overflow: hidden;
+}
+.block .block-image img{
+    width: 300px;
+    
+}
+.aboutevent > span{
+    color: rgb(16, 16, 16);
+    font-style: italic;
+    font-weight: 500;
+}
+.aboutevent{
+    background-color: rgb(212, 212, 212);
+    width: 300px;
+    height: 300px;
+    padding-right: 10px ;
+    box-shadow: 5px 10px  #484848;
+
+}
+.block .block-image img:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+.info-box{
+    position: absolute;
+    bottom: 25px;
+    background-color: black;
+    padding: 10px 30px;
+    transition: all;
+}
+.info-box:hover{
+    color: rgb(10, 9, 9);
+}
+.info-box .name{
+    color: red;
+    font-size: 16px;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: all;
+}
+.info-box .position{
+    font-size: 12px;
+    color: white;
+    text-transform: capitalize;
+}
