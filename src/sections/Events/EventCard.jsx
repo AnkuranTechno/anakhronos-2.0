@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './Eventcard.scss';
+import "./eventcard.scss";
 
 const EventCard = ({ image }) => {
   return (
@@ -15,7 +15,7 @@ const EventCard = ({ image }) => {
       </div>
       <div className="aboutevent">
         <span>
-          {' '}
+          {" "}
           Music gives soul to the universe, wings to the mind, flight to
           imagination and life to everything. And Techno Indian Idol intends to
           give all those music lovers among the freshmen to sing the melody of
