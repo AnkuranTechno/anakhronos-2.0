@@ -1,5 +1,9 @@
-import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 import "./Gallery.scss";
 import {
   gallimg1,
@@ -29,7 +33,9 @@ import {
   gallimg25,
   gallimg26,
   gallimg27,
+  arrow,
 } from "../../constants/images";
+import { useState } from "react";
 
 const data = [
   {
@@ -142,23 +148,48 @@ const data = [
   },
 ];
 const Gallery = () => {
+  const [swiperRef, setSwiperRef] = useState(null);
+
+  // const prevHandler = () => {
+  //   swiperRef.slidePrev();
+  // };
+
+  const nextHandler = () => {
+    swiperRef.slideNext();
+  };
   return (
     <div className="app__section gallery" id="gallery">
       <h1 className="app__section-container">Gallery</h1>
-      <div className=" gallery__container">
-        {data.map((item, id) => {
-          return (
-            <div className="item" key={id}>
-              <LazyLoadImage
-                src={item.img}
-                effect="blur"
-                height={"100%"}
-                width={"100%"}
-                alt="gallery"
-              />
-            </div>
-          );
-        })}
+
+      <div className="swiper">
+        <Swiper
+          onSwiper={(swiper) => setSwiperRef(swiper)}
+          slidesPerView={"auto"}
+          spaceBetween={20}
+          loop={true}
+          // modules={[]}
+          className="mySwiper"
+        >
+          <div className=" container">
+            {data.map((item, id) => {
+              return (
+                <div className="item" key={id}>
+                  <SwiperSlide className="swiper__slide">
+                    <img
+                      className="swiper__image"
+                      key={id}
+                      src={item.img}
+                      alt=""
+                    />
+                  </SwiperSlide>
+                </div>
+              );
+            })}
+          </div>
+          <div className="swiper__arrow" onClick={nextHandler}>
+            <img src={arrow} alt="" />
+          </div>
+        </Swiper>
       </div>
     </div>
   );
