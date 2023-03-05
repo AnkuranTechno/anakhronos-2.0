@@ -21,14 +21,14 @@
     padding-bottom: 3.5rem;
 
     &__slide {
-      max-width: 400px;
+      max-width: 395px;
       max-height: 300px;
       object-fit: contain;
       overflow: hidden;
-      transform: translateX(170px);
+      transform: translateX(140px);
       padding-bottom: 2rem;
       img {
-        width: 400px;
+        width: 395px;
         min-height: 300px;
       }
     }
@@ -36,7 +36,7 @@
     &__arrow {
       position: absolute;
       top: 73%;
-      left: 50%;
+      left: 46.5%;
       z-index: 10;
       // :hover {
       //   scale: 1.04;

@@ -165,7 +165,7 @@ const Gallery = () => {
         <Swiper
           onSwiper={(swiper) => setSwiperRef(swiper)}
           slidesPerView={"auto"}
-          spaceBetween={30}
+          spaceBetween={20}
           loop={true}
           // modules={[]}
           className="mySwiper"
