@@ -81,3 +81,4 @@ export { default as gallimg24 } from "../assets/images/gallery/gallery_fresher7.
 export { default as gallimg26 } from "../assets/images/gallery/gallery_fresher8.jpeg";
 export { default as gallimg25 } from "../assets/images/gallery/gallery_fresher9.JPG";
 export { default as gallimg27 } from "../assets/images/gallery/GUITAR1.jpg";
+export { default as arrow } from "../assets/images/gallery/arrow.png";
